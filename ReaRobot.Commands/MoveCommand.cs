@@ -3,8 +3,17 @@ using System;
 
 namespace ReaRobot.Commands
 {
+    /// <summary>
+    /// Command to move the robot in current direction.
+    /// </summary>
+    /// <seealso cref="ReaRobot.Commands.AbstractBaseCommand" />
     public class MoveCommand : AbstractBaseCommand
     {
+        /// <summary>
+        /// Applies the transformation.
+        /// </summary>
+        /// <param name="input">The input.</param>
+        /// <returns>The new configuration after transformation.</returns>
         protected override Configuration ApplyInternal(Configuration input)
         {
             switch (input.Direction())

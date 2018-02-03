@@ -13,7 +13,11 @@ namespace ReaRobot.Model
         WEST
     }
 
-    public static class OrientationExtensions
+    /// <summary>
+    /// Methods for manipulating direction. This avoid lots of switch logic in multiple classes
+    /// and keeps it at one place.
+    /// </summary>
+    public static class DirectionExtensions
     {
         /// <summary>
         /// Rotate left from current direction.

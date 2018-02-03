@@ -10,8 +10,15 @@ namespace ReaRobot.Console
 {
     class Program
     {
+        /// <summary>
+        /// The boundary
+        /// </summary>
         private static readonly Point _boundary = new Point(4, 4);
 
+        /// <summary>
+        /// Defines the entry point of the application.
+        /// </summary>
+        /// <param name="args">The arguments.</param>
         static void Main(string[] args)
         {
             Robot robot = BuildRobot();
@@ -19,6 +26,10 @@ namespace ReaRobot.Console
             System.Console.Read();
         }
 
+        /// <summary>
+        /// Runs the simulator.
+        /// </summary>
+        /// <param name="robot">The robot.</param>
         private static void RunSimulator(Robot robot)
         {
             List<string> files = new List<string> { "A", "B", "C" };
@@ -43,6 +54,10 @@ namespace ReaRobot.Console
 
         }
 
+        /// <summary>
+        /// Builds the robot.
+        /// </summary>
+        /// <returns>Built robot</returns>
         private static Robot BuildRobot()
         {
             return new RobotBuilder()
