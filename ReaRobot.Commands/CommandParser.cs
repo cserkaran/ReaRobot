@@ -71,9 +71,9 @@ namespace ReaRobot.Commands
             try
             {
                 return new PlaceCommand(
-                        int.Parse(matcher.Groups[0].Value),
                         int.Parse(matcher.Groups[1].Value),
-                        ParsePlaceCommandDirection(matcher.Groups[2].Value)
+                        int.Parse(matcher.Groups[2].Value),
+                        ParsePlaceCommandDirection(matcher.Groups[3].Value)
                 );
             }
             catch (Exception e)

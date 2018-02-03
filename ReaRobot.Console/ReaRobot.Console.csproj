@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B61A48B8-B106-41A4-88E1-547DBD774AA7}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReaRobot.Commands</RootNamespace>
-    <AssemblyName>ReaRobot.Commands</AssemblyName>
+    <ProjectGuid>{AD751AE1-D2DD-4952-8B17-DC4ADDC7304A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ReaRobot.Console</RootNamespace>
+    <AssemblyName>ReaRobot.Console</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -22,6 +23,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>..\Build\</OutputPath>
@@ -41,26 +43,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractBaseCommand.cs" />
-    <Compile Include="CommandParser.cs" />
-    <Compile Include="LeftCommand.cs" />
-    <Compile Include="MoveCommand.cs" />
-    <Compile Include="NullCommand.cs" />
-    <Compile Include="PlaceCommand.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReportCommand.cs" />
-    <Compile Include="RightCommand.cs" />
-    <Compile Include="Transition.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReaRobot.Builder\ReaRobot.Builder.csproj">
+      <Project>{8860F2D0-2AF4-461F-892B-E4AD6B453FE9}</Project>
+      <Name>ReaRobot.Builder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaRobot.Commands\ReaRobot.Commands.csproj">
+      <Project>{B61A48B8-B106-41A4-88E1-547DBD774AA7}</Project>
+      <Name>ReaRobot.Commands</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ReaRobot.Infrastructure\ReaRobot.Infrastructure.csproj">
-      <Project>{4e740639-7ad2-4353-b7e0-a8b548da32f3}</Project>
+      <Project>{4E740639-7AD2-4353-B7E0-A8B548DA32F3}</Project>
       <Name>ReaRobot.Infrastructure</Name>
     </ProjectReference>
     <ProjectReference Include="..\ReaRobot.Model\ReaRobot.Model.csproj">
-      <Project>{33869dbb-ae89-470e-8201-87c026687c80}</Project>
+      <Project>{33869DBB-AE89-470E-8201-87C026687C80}</Project>
       <Name>ReaRobot.Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\C.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\B.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\A.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

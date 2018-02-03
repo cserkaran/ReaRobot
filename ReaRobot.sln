@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaRobot.Model", "ReaRobot.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaRobot.Commands", "ReaRobot.Commands\ReaRobot.Commands.csproj", "{B61A48B8-B106-41A4-88E1-547DBD774AA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaRobot.Builder", "ReaRobot.Builder\ReaRobot.Builder.csproj", "{8860F2D0-2AF4-461F-892B-E4AD6B453FE9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReaRobot.Console", "ReaRobot.Console\ReaRobot.Console.csproj", "{AD751AE1-D2DD-4952-8B17-DC4ADDC7304A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{B61A48B8-B106-41A4-88E1-547DBD774AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B61A48B8-B106-41A4-88E1-547DBD774AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B61A48B8-B106-41A4-88E1-547DBD774AA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8860F2D0-2AF4-461F-892B-E4AD6B453FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8860F2D0-2AF4-461F-892B-E4AD6B453FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8860F2D0-2AF4-461F-892B-E4AD6B453FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8860F2D0-2AF4-461F-892B-E4AD6B453FE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD751AE1-D2DD-4952-8B17-DC4ADDC7304A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD751AE1-D2DD-4952-8B17-DC4ADDC7304A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD751AE1-D2DD-4952-8B17-DC4ADDC7304A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD751AE1-D2DD-4952-8B17-DC4ADDC7304A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
