@@ -4,13 +4,15 @@ using System.Text.RegularExpressions;
 
 namespace ReaRobot.Commands
 {
+    /// <summary>
+    /// Parser to parse string input and generate commands.
+    /// </summary>
     public class CommandParser
     {
         private static readonly string LEFT = "LEFT";
         private static readonly string MOVE = "MOVE";
         private static readonly String PLACE_PREFIX = "PLACE";
         private static readonly Regex PLACE_REGEX = new Regex(PLACE_PREFIX + " (\\d+),(\\d+),(\\w+)");
-
         private static readonly string REPORT = "REPORT";
         private static readonly string RIGHT = "RIGHT";
         private static readonly string NORTH = "NORTH";
@@ -18,6 +20,11 @@ namespace ReaRobot.Commands
         private static readonly string SOUTH = "SOUTH";
         private static readonly string WEST = "WEST";
 
+        /// <summary>
+        /// Parses the command string.
+        /// </summary>
+        /// <param name="commandString">The command string.</param>
+        /// <returns>The respective command.</returns>
         public static AbstractBaseCommand Command(string commandString)
         {
             if (string.IsNullOrWhiteSpace(commandString))
@@ -52,6 +59,11 @@ namespace ReaRobot.Commands
             }
         }
 
+        /// <summary>
+        /// Parses the place command string.
+        /// </summary>
+        /// <param name="commandString">The command string.</param>
+        /// <returns>The place command</returns>
         private static AbstractBaseCommand ParsePlaceCommand(String commandString)
         {
             Match matcher = PLACE_REGEX.Match(commandString);
@@ -66,6 +78,11 @@ namespace ReaRobot.Commands
             }
         }
 
+        /// <summary>
+        /// Produces the place command.
+        /// </summary>
+        /// <param name="matcher">The matcher.</param>
+        /// <returns>The place command</returns>
         private static AbstractBaseCommand ProducePlaceCommand(Match matcher)
         {
             try
@@ -83,6 +100,16 @@ namespace ReaRobot.Commands
             }
         }
 
+        /// <summary>
+        /// Parses the place command direction.
+        /// </summary>
+        /// <param name="directionString">The direction string.</param>
+        /// <returns></returns>
+        /// <exception cref="System.InvalidOperationException">
+        /// Empty orientation
+        /// or
+        /// Unknown direction: " + directionString
+        /// </exception>
         private static Direction ParsePlaceCommandDirection(String directionString)
         {
             if (string.IsNullOrWhiteSpace(directionString))

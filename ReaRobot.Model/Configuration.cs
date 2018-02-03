@@ -69,8 +69,8 @@ namespace ReaRobot.Model
         public override int GetHashCode()
         {
             int result = 77;
-            result = 31 * result + this.Direction().GetHashCode();
-            result = 31 * result + this.Position().GetHashCode();
+            result = 31 * result + Direction().GetHashCode();
+            result = 31 * result + Position().GetHashCode();
             return result;
         }
 

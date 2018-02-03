@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -57,11 +58,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CommandParserTests.cs" />
+    <Compile Include="CommandsTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ReaRobot.Builder\ReaRobot.Builder.csproj">
+      <Project>{8860f2d0-2af4-461f-892b-e4ad6b453fe9}</Project>
+      <Name>ReaRobot.Builder</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaRobot.Commands\ReaRobot.Commands.csproj">
+      <Project>{b61a48b8-b106-41a4-88e1-547dbd774aa7}</Project>
+      <Name>ReaRobot.Commands</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaRobot.Infrastructure\ReaRobot.Infrastructure.csproj">
+      <Project>{4e740639-7ad2-4353-b7e0-a8b548da32f3}</Project>
+      <Name>ReaRobot.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ReaRobot.Model\ReaRobot.Model.csproj">
+      <Project>{33869dbb-ae89-470e-8201-87c026687c80}</Project>
+      <Name>ReaRobot.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,6 +1,5 @@
 ﻿using ReaRobot.Builder;
 using System.Drawing;
-using System;
 using System.IO;
 using System.Collections.Generic;
 using ReaRobot.Commands;
