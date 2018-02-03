@@ -42,7 +42,7 @@ namespace ReaRobot.Builder
         public Transition Apply(AbstractBaseCommand command)
         {
             Configuration oldConfiguration = _configuration;
-            Configuration newConfiguration = command.Apply(this._configuration);
+            Configuration newConfiguration = command.Apply(_configuration);
 
             if (IsValidConfiguration(newConfiguration))
             {
